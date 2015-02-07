@@ -9,18 +9,26 @@ function start(){
 
 function myTimer(){
   centesimas++;
-    document.getElementById("centesimas").innerHTML=centesimas;
-    if(centesimas>99){
-      segundos++;
-      segundos>9 ? document.getElementById("segundos").innerHTML=segundos :
-      document.getElementById("segundos").innerHTML="0"+segundos;
+  centesimas>9 ? document.getElementById("centesimas").innerHTML=centesimas :
+  document.getElementById("centesimas").innerHTML="0"+centesimas;
+  if(centesimas>99){
+    segundos++;
+    segundos>9 ? document.getElementById("segundos").innerHTML=segundos :
+    document.getElementById("segundos").innerHTML="0"+segundos;
     centesimas=0;
+    document.getElementById("centesimas").innerHTML="00";
     if (segundos>59){
-      document.getElementById("minutos").innerHTML=minutos;
+      minutos++;
+      minutos>9 ? document.getElementById("minutos").innerHTML=minutos :
+      document.getElementById("minutos").innerHTML="0"+minutos;
       segundos=0;
+      document.getElementById("segundos").innerHTML="00";
       if (minutos>59){
-        document.getElementById("horas").innerHTML=horas;
+        horas++;
+        horas>9 ? document.getElementById("horas").innerHTML=horas :
+        document.getElementById("horas").innerHTML="0"+horas;
         minutos=0;
+        document.getElementById("minutos").innerHTML="00";
       }
     }
   }

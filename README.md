@@ -1,2 +1,2 @@
-# practica2Cronometro
+# Practica2: Cronometro
 Basic timer using javascript
