@@ -2,9 +2,27 @@
 var centesimas=0;
 var segundos=0;
 var minutos=0;
+var horas=0;
+var timer;
 
 function start(){
-  myVar = setInterval(function(){ myTimer() }, 10);
+  timer = setInterval(function(){ myTimer() }, 10);
+}
+
+function stop(){
+  window.clearInterval(timer);
+}
+
+function reset(){
+  stop();
+  centesimas= 0;
+  segundos= 0;
+  minutos= 0;
+  horas = 0;
+  document.getElementById("centesimas").innerHTML="00";
+  document.getElementById("segundos").innerHTML="00";
+  document.getElementById("minutos").innerHTML="00";
+  document.getElementById("horas").innerHTML="00";
 }
 
 function myTimer(){
